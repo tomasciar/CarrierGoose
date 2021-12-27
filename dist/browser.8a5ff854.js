@@ -1,0 +1,2 @@
+("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{}).parcelRequire77aa.register("kAYUQ",(function(e,n){var o=function(){if("undefined"!=typeof self)return self;if("undefined"!=typeof window)return window;if(void 0!==o)return o;throw new Error("unable to locate global object")}();e.exports=n=o.fetch,o.fetch&&(n.default=o.fetch.bind(o)),n.Headers=o.Headers,n.Request=o.Request,n.Response=o.Response}));
+//# sourceMappingURL=browser.8a5ff854.js.map
