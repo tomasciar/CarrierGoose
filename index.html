@@ -13,23 +13,27 @@
 <body>
   <ul id="list"></ul>
 
-  <div id="inputs">
-    <input class="input" id="questions" type="text" />
-    <input class="input" id="answers" type="text" />
-    <button class="button" id="add-button">Add</button>
-  </div>
+  <form id="item-form">
+    <div id="first-row">
+      <input class="input" id="question" type="text" />
+      <input class="input" id="answer" type="text" />
+      <button class="button" id="add-button">Add</button>
+    </div>
+  </form>
 
-  <div>
+  <div id="second-row">
     <input class="input" id="quizlet" type="text" />
-    <input class="input" id="phone-number" type="text" />
-    <button class="button" id="add-button">Send</button>
+    <form id="number-form">
+      <input class="input" id="phone-number" type="text" />
+      <button class="button" id="send-button">Send</button>
+    </form>
   </div>
 
   <template id="list-item-template">
     <li class="list-item">
       <label class="list-item-label">
-        <input type="checkbox" data-list-item-checkbox />
-        <span data-list-item-text></span>
+        <span data-list-item-question></span>
+        <span data-list-item-answer></span>
       </label>
       <button data-button-delete>Delete</button>
     </li>
