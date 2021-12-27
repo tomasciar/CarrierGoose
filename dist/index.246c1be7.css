@@ -1,0 +1,2 @@
+*,:after,:before{box-sizing:border-box}body{align-items:center;display:flex;flex-direction:column;font-size:2rem;justify-content:center;margin:0;min-height:100vh}button{cursor:pointer}#item-form{display:flex;flex-direction:column}#item-form>*{margin:.15rem}#list{padding:0}.list-item{list-style:none}.list-item-label:hover{cursor:pointer}.list-item-label:hover>[data-list-item-question]{color:#222;text-decoration:line-through}[data-button-delete]{margin-left:.5rem}
+/*# sourceMappingURL=index.246c1be7.css.map */
