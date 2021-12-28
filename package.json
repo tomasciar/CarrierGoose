@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/tomasciar/CarrierGoose#readme",
   "dependencies": {
-    "puppeteer": "^13.0.1"
+    "dotenv": "^10.0.0",
+    "puppeteer": "^13.0.1",
+    "twilio": "^3.72.0"
   },
   "devDependencies": {
     "parcel": "^2.0.1"
