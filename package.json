@@ -1,0 +1,27 @@
+{
+  "name": "carrier-goose",
+  "version": "1.0.0",
+  "description": "",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomasciar/CarrierGoose.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomasciar/CarrierGoose/issues"
+  },
+  "homepage": "https://github.com/tomasciar/CarrierGoose#readme",
+  "dependencies": {
+    "puppeteer": "^13.0.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  }
+}
