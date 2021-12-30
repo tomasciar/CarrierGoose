@@ -25,21 +25,23 @@
 
       <div id="second-row">
         <input class="input qa" id="answer" type="text" value="Answer" />
-        <button class="button" id="add-button">Add</button>
+        <button class="button" id="add-button">+</button>
       </div>
     </form>
 
     <form id="quiz-form" autocomplete="off">
       <div id="third-row">
         <input class="input" id="quiz-input" type="text" value="Brainscape Link" />
-        <button class="button" id="quiz-button">Quiz</button>
+        <button class="button" id="quiz-button">+</button>
       </div>
     </form>
 
     <form id="number-form" autocomplete="off">
       <div id="fourth-row">
         <input class="input" id="phone-number" type="text" value="Phone Number" />
-        <button class="button" id="send-button">Send</button>
+        <button class="button" id="send-button">
+          <img id=send-icon src="send2.png" style="width:15px;height:15px"/>
+        </button>
       </div>
     </form>
   </div>
@@ -47,8 +49,8 @@
   <template id="list-item-template">
     <li class="list-item">
       <label class="list-item-label">
-        <span data-list-item-question></span>
-        <span data-list-item-answer></span>
+        <span class="question-item" data-list-item-question></span>
+        <span class="answer-item" data-list-item-answer></span>
       </label>
       <button data-button-delete>❌</button>
     </li>
