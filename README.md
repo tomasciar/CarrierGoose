@@ -1,5 +1,5 @@
 # CarrierGoose (Hack the North 2021)
-<img width="1440" alt="carriergoose" src="https://user-images.githubusercontent.com/45378799/133916962-c3362537-c284-4710-a369-c93e9acc5ed5.png">
+<img width="1440" alt="IMG_6735" src="https://user-images.githubusercontent.com/45378799/147782240-aeaa3ed0-82de-493d-88e2-b9a263d7e54b.png">
 
 ## Inspiration
 
