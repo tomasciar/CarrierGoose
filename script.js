@@ -7,6 +7,7 @@ const itemForm = document.getElementById("item-form");
 const numberForm = document.getElementById("number-form");
 const addButton = document.getElementById("add-button");
 const quizInput = document.getElementById("quiz-input");
+const numberInput = document.getElementById("phone-number");
 const quizButton = document.getElementById("quiz-button");
 const quizForm = document.getElementById("quiz-form");
 
@@ -152,9 +153,7 @@ TODO LIST
 
 - Twilio API
 - Quiz button glitch
-- Scrolling list (fades into sky)
 - Delete All button
-- Hide answer in a link
 - Format answers to remove "/n" & "/t"
 - Maximum # of flashcards
 - Host cors-anywhere
@@ -164,47 +163,19 @@ TODO LIST
 - Host website
 */
 
-/*
-Carrier Goose Delivery! 
--
--
--
------------
-Answer
-___________
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-^
-Question:
-What is scarcity?
+// Resets the text value of all the inputs on click
+questionInput.addEventListener("click", () => {
+  questionInput.value = "";
+});
 
+answerInput.addEventListener("click", () => {
+  answerInput.value = "";
+});
 
+quizInput.addEventListener("click", () => {
+  quizInput.value = "";
+});
 
-
-*/
+numberInput.addEventListener("click", () => {
+  numberInput.value = "";
+});
