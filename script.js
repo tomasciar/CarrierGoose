@@ -1,15 +1,23 @@
 // Select each element by id
+// New item template, item list
 const template = document.getElementById("list-item-template");
 const list = document.getElementById("list");
+
+// Question input, answer input, add button, item form
 const questionInput = document.getElementById("question");
 const answerInput = document.getElementById("answer");
-const itemForm = document.getElementById("item-form");
-const numberForm = document.getElementById("number-form");
 const addButton = document.getElementById("add-button");
+const itemForm = document.getElementById("item-form");
+
+// Quiz input, quiz button, quiz form
 const quizInput = document.getElementById("quiz-input");
-const numberInput = document.getElementById("phone-number");
 const quizButton = document.getElementById("quiz-button");
 const quizForm = document.getElementById("quiz-form");
+
+// Number input, send button, number form
+const numberInput = document.getElementById("phone-number");
+const sendButton = document.getElementById("send-button");
+const numberForm = document.getElementById("number-form");
 
 // Define constants for local storage
 const LOCAL_STORAGE_PREFIX = "CARRIER_GOOSE";
@@ -29,7 +37,7 @@ addButton.addEventListener("click", (e) => {
   const newItem = {
     question: questionInput.value,
     answer: answerInput.value,
-    id: new Date().valueOf().toString()
+    id: new Date().valueOf().toString(),
   };
 
   // Add the item to the items array and local storage
@@ -120,7 +128,7 @@ function brainScrape(url) {
         sourceElements[i] = {
           question: questionPair[i],
           answer: answerPair[i],
-          id: new Date().valueOf().toString() + i
+          id: new Date().valueOf().toString() + i,
         };
       }
     });
@@ -147,6 +155,23 @@ quizButton.addEventListener("click", (e) => {
   // Clear the question and answer inputs
   quizInput.value = "";
 });
+
+// Function to format phone number input
+function phoneFormat(input) {
+  //returns (###) ###-####
+  input = input.replace(/\D/g, "");
+  let size = input.length;
+  if (size > 0) {
+    input = "(" + input;
+  }
+  if (size > 3) {
+    input = input.slice(0, 4) + ") " + input.slice(4, 11);
+  }
+  if (size > 6) {
+    input = input.slice(0, 9) + "-" + input.slice(9);
+  }
+  return input;
+}
 
 /*
 TODO LIST
