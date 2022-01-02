@@ -40,24 +40,24 @@
 
       <form id="number-form" autocomplete="off">
         <div id="fourth-row">
-          <input class="input" id="phone-number" type="text" placeholder="Phone Number" />
+          <input class="input" id="phone-number" type="tel" onInput="this.value = phoneFormat(this.value)"
+            placeholder="Phone Number" />
           <button class="button" id="send-button">
-            <img id=send-icon src="send2.png" style="width:15px;height:15px" />
+            <img id="send-icon" src="send2.png" style="width:15px;height:15px" />
           </button>
         </div>
       </form>
     </div>
-  </div>
 
-  <template id="list-item-template">
-    <li class="list-item">
-      <label class="list-item-label">
-        <span class="question-item" data-list-item-question></span>
-        <span class="answer-item" data-list-item-answer></span>
-      </label>
-      <button data-button-delete>❌</button>
-    </li>
-  </template>
+    <template id="list-item-template">
+      <li class="list-item">
+        <label class="list-item-label">
+          <span class="question-item" data-list-item-question></span>
+          <span class="answer-item" data-list-item-answer></span>
+        </label>
+        <button data-button-delete>❌</button>
+      </li>
+    </template>
   </div>
 
   <nav>
