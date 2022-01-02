@@ -4,7 +4,7 @@ const ejs = require("ejs");
 
 // App Variables
 const app = express();
-const port = process.env.PORT || "8000";
+const port = "8000";
 
 // App Configuration
 app.use(express.static("public"));

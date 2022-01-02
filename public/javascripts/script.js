@@ -181,9 +181,8 @@ TODO LIST
 - Delete All button
 - Format answers to remove "/n" & "/t"
 - Maximum # of flashcards
-- Host cors-anywhere
-- CSS (once we acquire landing page from Fiverr)
-- How does it work?
-- Learn More
-- Host website
+- Host cors-anywhere (or figure out cors ??)
+- How?
+- Why?
+- Heroku
 */

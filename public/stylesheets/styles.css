@@ -5,12 +5,14 @@
   font-family: Libre Baskerville, sans-serif;
 }
 
+/* Styles for landing page */
+
 ::-webkit-scrollbar {
   display: none;
 }
 
 #landing-page {
-  background-image: url("/images/carriergoose-main.jpeg");
+  background-image: url("/images/carriergoose.jpeg");
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -165,4 +167,18 @@ nav {
 
 .question-item {
   margin-right: 50px;
+}
+
+#send-icon,
+#brainscape-logo {
+  width: 15px;
+  height: 15px;
+}
+
+/* Styles for about page */
+
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
