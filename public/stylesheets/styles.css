@@ -10,7 +10,7 @@
 }
 
 html {
-  background-image: url("carriergoose-main.jpeg");
+  background-image: url("/images/carriergoose-main.jpeg");
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;

@@ -9,6 +9,7 @@ const port = process.env.PORT || "8000";
 // App Configuration
 app.use(express.static("public"));
 app.set("view engine", "ejs");
+app.set("views", __dirname + "/views");
 
 // Routes Definitions
 app.get("/", function (req, res) {
