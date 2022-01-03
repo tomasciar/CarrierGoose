@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tomasciar/CarrierGoose#readme",
   "dependencies": {
+    "body-parser": "^1.19.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
@@ -25,6 +26,9 @@
     "twilio": "^3.72.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
     "nodemon": "^2.0.15"
   },
   "main": "index.js"

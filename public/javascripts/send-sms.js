@@ -6,6 +6,7 @@ const authToken = process.env.TWILIO_AUTH_TOKEN;
 const twilio = require("twilio");
 const client = new twilio(accountSid, authToken);
 
+// module.exports.sendMessage = function (question, answer, number) {
 function sendMessage(question, answer, number) {
   client.messages
     .create({
@@ -20,3 +21,5 @@ function sendMessage(question, answer, number) {
     })
     .then((message) => console.log(message.sid));
 }
+
+module.exports = { sendMessage };
