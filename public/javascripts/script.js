@@ -37,7 +37,7 @@ addButton.addEventListener("click", (e) => {
   const newItem = {
     question: questionInput.value,
     answer: answerInput.value,
-    id: new Date().valueOf().toString(),
+    id: new Date().valueOf().toString()
   };
 
   // Add the item to the items array and local storage
@@ -128,7 +128,7 @@ function brainScrape(url) {
         sourceElements[i] = {
           question: questionPair[i],
           answer: answerPair[i],
-          id: new Date().valueOf().toString() + i,
+          id: new Date().valueOf().toString() + i
         };
       }
     });
@@ -139,18 +139,14 @@ quizButton.addEventListener("click", (e) => {
   e.preventDefault();
 
   if (quizInput.value === "") return;
-  console.log(quizInput.value);
 
   brainScrape(quizInput.value);
 
   for (let i = 0; i < sourceElements.length; i++) {
-    console.log(sourceElements[i]);
     items.push(sourceElements[i]);
     renderItems(sourceElements[i]);
     saveItems();
   }
-
-  console.log(items);
 
   // Clear the question and answer inputs
   quizInput.value = "";
@@ -158,7 +154,7 @@ quizButton.addEventListener("click", (e) => {
 
 // Function to format phone number input
 function phoneFormat(input) {
-  //returns (###) ###-####
+  // Returns (###) ###-####
   input = input.replace(/\D/g, "");
   let size = input.length;
   if (size > 0) {
