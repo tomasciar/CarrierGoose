@@ -21,13 +21,12 @@
         <div id="list-guide">
           <ul id="list"></ul>
         </div>
-        <form id="item-form" method="POST" autocomplete="off">
+        <form id="item-form" method="GET" autocomplete="off">
           <input
             class="input qa"
             id="question"
             type="text"
             placeholder="Question"
-            name="questions"
           />
           <button disabled id="invisible-button">+</button>
 
@@ -36,17 +35,15 @@
             id="answer"
             type="text"
             placeholder="Answer"
-            name="answers"
           />
           <button type="submit" class="button" id="add-button">+</button>
         </form>
 
-        <form id="quiz-form" method="POST" autocomplete="off">
+        <form id="quiz-form" autocomplete="off">
           <input
             class="input"
             id="quiz-input"
             type="text"
-            name="brainscape"
             placeholder="Brainscape Link"
           />
           <button type="submit" class="button" id="quiz-button">
@@ -75,7 +72,7 @@
       </div>
 
       <template id="list-item-template">
-        <li class="list-item">
+        <li class="list-item" method="POST">
           <label class="list-item-label">
             <span class="question-item" data-list-item-question></span>
             <span class="answer-item" data-list-item-answer></span>

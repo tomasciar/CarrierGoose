@@ -135,23 +135,23 @@ function brainScrape(url) {
 }
 
 // Function to add Brainscape items to the list
-// quizButton.addEventListener("click", (e) => {
-//   e.preventDefault();
+quizButton.addEventListener("click", (e) => {
+  e.preventDefault();
 
-//   if (quizInput.value === "") return;
-//   console.log(quizInput.value);
+  if (quizInput.value === "") return;
+  console.log(quizInput.value);
 
-//   brainScrape(quizInput.value);
+  brainScrape(quizInput.value);
 
-//   for (let i = 0; i < sourceElements.length; i++) {
-//     items.push(sourceElements[i]);
-//     renderItems(sourceElements[i]);
-//     saveItems();
-//   }
+  for (let i = 0; i < sourceElements.length; i++) {
+    items.push(sourceElements[i]);
+    renderItems(sourceElements[i]);
+    saveItems();
+  }
 
-//   // Clear the question and answer inputs
-//   quizInput.value = "";
-// });
+  // Clear the question and answer inputs
+  quizInput.value = "";
+});
 
 // Function to format phone number input
 function phoneFormat(input) {
@@ -183,5 +183,3 @@ TODO LIST
 - Why?
 - Heroku
 */
-
-export { items };
