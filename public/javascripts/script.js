@@ -1,18 +1,11 @@
-// Select each element by id
 // New item template, item list
 const template = document.getElementById("list-item-template");
 const list = document.getElementById("list");
 
 // Question input, answer input, add button, item form
-const questionInput = document.getElementById("question");
-const answerInput = document.getElementById("answer");
+const input = document.getElementById("todo");
 const addButton = document.getElementById("add-button");
 const itemForm = document.getElementById("item-form");
-
-// Quiz input, quiz button, quiz form
-const quizInput = document.getElementById("quiz-input");
-const quizButton = document.getElementById("quiz-button");
-const quizForm = document.getElementById("quiz-form");
 
 // Number input, send button, number form
 const numberInput = document.getElementById("phone-number");
@@ -27,16 +20,25 @@ const ITEM_STORAGE_KEY = `${LOCAL_STORAGE_PREFIX}-items`;
 let items = loadItems();
 items.forEach(renderItems);
 
+const options = {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(items),
+};
+
+fetch("/todos", options);
+
 // Create new item when question & answer form is submitted
 addButton.addEventListener("click", (e) => {
   e.preventDefault();
 
-  if (questionInput.value === "" || answerInput.value === "") return;
+  if (input.value === "") return;
 
   // Template for new list item
   const newItem = {
-    question: questionInput.value,
-    answer: answerInput.value,
+    todo: input.value,
     id: new Date().valueOf().toString(),
   };
 
@@ -45,9 +47,19 @@ addButton.addEventListener("click", (e) => {
   renderItems(newItem);
   saveItems();
 
+  // POST items array to server
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(items),
+  };
+
+  fetch("/todos", options);
+
   // Clear the question and answer inputs
-  questionInput.value = "";
-  answerInput.value = "";
+  input.value = "";
 });
 
 // Event listener to remove items on click
@@ -69,12 +81,8 @@ function renderItems(item) {
   listItem.dataset.listId = item.id;
 
   // Add the question & answer text to their corresponding span elements
-  const questionElement = templateClone.querySelector(
-    "[data-list-item-question]"
-  );
-  const answerElement = templateClone.querySelector("[data-list-item-answer]");
-  questionElement.innerText = item.question;
-  answerElement.innerText = item.answer;
+  const inputElement = templateClone.querySelector("[data-list-item-input]");
+  inputElement.innerText = item.todo;
 
   // Append the template clone onto the list element
   list.appendChild(templateClone);
@@ -91,66 +99,8 @@ function saveItems() {
   localStorage.setItem(ITEM_STORAGE_KEY, JSON.stringify(items));
 }
 
-// Link for cors proxy
-const CORS_API_URL = "https://cors-anywhere.herokuapp.com/";
-
 // Array waiting for elements of source page to be pushed to it
 const sourceElements = [];
-
-function brainScrape(url) {
-  fetch(`${CORS_API_URL}${url}`)
-    .then((response) => {
-      return response;
-    })
-    .then((data) => {
-      return data.text();
-    })
-    .then((text) => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(text, "text/html");
-
-      const questions = doc.querySelectorAll(".card-question-text");
-      const answers = doc.querySelectorAll(".card-answer-text");
-
-      let questionPair = [];
-      questions.forEach((pair) => {
-        questionPair.push(pair.innerText);
-      });
-
-      let answerPair = [];
-      answers.forEach((pair) => {
-        answerPair.push(pair.innerText);
-      });
-
-      for (let i = 0; i < questionPair.length; i++) {
-        if (answerPair[i] === null) return;
-
-        sourceElements[i] = {
-          question: questionPair[i],
-          answer: answerPair[i],
-          id: new Date().valueOf().toString() + i,
-        };
-      }
-    });
-}
-
-// Function to add Brainscape items to the list
-quizButton.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  if (quizInput.value === "") return;
-
-  brainScrape(quizInput.value);
-
-  for (let i = 0; i < sourceElements.length; i++) {
-    items.push(sourceElements[i]);
-    renderItems(sourceElements[i]);
-    saveItems();
-  }
-
-  // Clear the question and answer inputs
-  quizInput.value = "";
-});
 
 // Function to format phone number input
 function phoneFormat(input) {
@@ -172,11 +122,6 @@ function phoneFormat(input) {
 /*
 TODO LIST
 \
-- Quiz button glitch
 - Delete All button
 - Format answers to remove "/n" & "/t"
-- Maximum # of flashcards
-- Host cors-anywhere (or figure out cors ??)
-- How?
-- Why?
 */

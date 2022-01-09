@@ -18,26 +18,27 @@ app.set("layout", "layouts/layout");
 app.use(expressLayouts);
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
-const mongoose = require("mongoose");
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
-const db = mongoose.connection;
+// const mongoose = require("mongoose");
+// mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+// const db = mongoose.connection;
 
-db.on("error", (error) => console.log(error));
-db.once("open", () => console.log("Connected to Mongoose"));
+// db.on("error", (error) => console.log(error));
+// db.once("open", () => console.log("Connected to Mongoose"));
+
+let todos = null;
 
 // Routes Definitions
-app
-  .route("/")
+app.post("/todos", (req, res) => {
+  todos = req.body;
+  res.end();
+});
 
-  .post((req, res) => {
-    const phoneNumber = req.body.number;
-    console.log(phoneNumber);
-    console.log(req.body);
-    let question = "hi tomas!";
-    let answer = "what's up?";
-    sendMessage(question, answer, phoneNumber);
-  });
+app.post("/", (req, res) => {
+  sendMessage(todos, req.body.number);
+  res.redirect("/");
+});
 
 // Server Activation
 app.use("/", indexRouter);
