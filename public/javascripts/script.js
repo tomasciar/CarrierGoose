@@ -139,18 +139,14 @@ quizButton.addEventListener("click", (e) => {
   e.preventDefault();
 
   if (quizInput.value === "") return;
-  console.log(quizInput.value);
 
   brainScrape(quizInput.value);
 
   for (let i = 0; i < sourceElements.length; i++) {
-    console.log(sourceElements[i]);
     items.push(sourceElements[i]);
     renderItems(sourceElements[i]);
     saveItems();
   }
-
-  console.log(items);
 
   // Clear the question and answer inputs
   quizInput.value = "";
@@ -158,7 +154,7 @@ quizButton.addEventListener("click", (e) => {
 
 // Function to format phone number input
 function phoneFormat(input) {
-  //returns (###) ###-####
+  // Returns (###) ###-####
   input = input.replace(/\D/g, "");
   let size = input.length;
   if (size > 0) {
@@ -175,8 +171,7 @@ function phoneFormat(input) {
 
 /*
 TODO LIST
-
-- Twilio API
+\
 - Quiz button glitch
 - Delete All button
 - Format answers to remove "/n" & "/t"
@@ -184,5 +179,4 @@ TODO LIST
 - Host cors-anywhere (or figure out cors ??)
 - How?
 - Why?
-- Heroku
 */
