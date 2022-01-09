@@ -47,6 +47,10 @@ body {
   margin-bottom: 20px;
 }
 
+#todo {
+  width: 300px;
+}
+
 .button {
   transition-duration: 0.4;
   cursor: pointer;
@@ -73,7 +77,6 @@ body {
 }
 
 #add-button,
-#quiz-button,
 #send-button {
   font-size: 1rem;
   text-align: center;
@@ -85,30 +88,27 @@ body {
   margin-top: 0px;
 }
 
-#invisible-button {
-  visibility: hidden;
-}
-
 #send-icon {
   margin-top: 4px;
 }
 
-.input {
+#phone-number,
+#todo {
   border-color: rgb(126, 101, 152);
   border-radius: 1rem;
   padding: 15px;
   height: 25px;
-  width: 180px;
   color: grey;
   background-color: white;
   opacity: 0.85;
 }
 
-.input.qa {
-  background-color: rgb(126, 101, 152);
+#phone-number {
+  width: 200px;
+}
+
+#todo {
   width: 300px;
-  color: grey;
-  background-color: white;
 }
 
 #item-form > * {
@@ -141,44 +141,7 @@ body {
   opacity: 0.95;
 }
 
-nav {
-  position: absolute;
-  left: 0%;
-  bottom: 0%;
-  color: white;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1rem;
-  height: 40px;
-  width: 500px;
-}
-
-.nav-list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  align-items: flex-start;
-}
-
-.nav-list a {
-  margin-left: 1.5rem;
-}
-
-.question-item {
-  margin-right: 50px;
-}
-
-#send-icon,
-#brainscape-logo {
+#send-icon {
   width: 15px;
   height: 15px;
-}
-
-/* Styles for about page */
-
-#about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
