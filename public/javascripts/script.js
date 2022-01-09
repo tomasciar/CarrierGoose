@@ -23,9 +23,9 @@ items.forEach(renderItems);
 const options = {
   method: "POST",
   headers: {
-    "Content-Type": "application/json",
+    "Content-Type": "application/json"
   },
-  body: JSON.stringify(items),
+  body: JSON.stringify(items)
 };
 
 fetch("/todos", options);
@@ -39,7 +39,7 @@ addButton.addEventListener("click", (e) => {
   // Template for new list item
   const newItem = {
     todo: input.value,
-    id: new Date().valueOf().toString(),
+    id: new Date().valueOf().toString()
   };
 
   // Add the item to the items array and local storage
@@ -51,9 +51,9 @@ addButton.addEventListener("click", (e) => {
   const options = {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "application/json"
     },
-    body: JSON.stringify(items),
+    body: JSON.stringify(items)
   };
 
   fetch("/todos", options);
@@ -70,7 +70,19 @@ list.addEventListener("click", (e) => {
   const listId = parent.dataset.listId;
   parent.remove();
   items = items.filter((item) => item.id !== listId);
+  loadItems();
   saveItems();
+
+  // POST items array to server
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(items)
+  };
+
+  fetch("/todos", options);
 });
 
 // Function to render list of items
