@@ -2,9 +2,10 @@
   "name": "carrier-goose",
   "version": "1.0.0",
   "description": "<img width=\"1440\" alt=\"IMG_6735\" src=\"https://user-images.githubusercontent.com/45378799/147782240-aeaa3ed0-82de-493d-88e2-b9a263d7e54b.png\">",
-  "source": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon ./index.js"
+    "start": "node ./server.js",
+    "dev": "nodemon ./server.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.2",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^6.1.5",
     "twilio": "^3.72.0"
   },
   "devDependencies": {
@@ -30,6 +33,5 @@
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
     "nodemon": "^2.0.15"
-  },
-  "main": "index.js"
+  }
 }
