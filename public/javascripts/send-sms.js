@@ -16,7 +16,9 @@ function sendMessage(question, answer, number) {
         `Q: ${question}\n\nScroll up to see the answer!`,
 
       to: number,
-      from: "+16479552564",
+      from: "+16479552565",
     })
     .then((message) => console.log(message.sid));
 }
+
+module.exports = { sendMessage };

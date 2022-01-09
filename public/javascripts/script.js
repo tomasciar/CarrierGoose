@@ -37,7 +37,7 @@ addButton.addEventListener("click", (e) => {
   const newItem = {
     question: questionInput.value,
     answer: answerInput.value,
-    id: new Date().valueOf().toString()
+    id: new Date().valueOf().toString(),
   };
 
   // Add the item to the items array and local storage
@@ -128,7 +128,7 @@ function brainScrape(url) {
         sourceElements[i] = {
           question: questionPair[i],
           answer: answerPair[i],
-          id: new Date().valueOf().toString() + i
+          id: new Date().valueOf().toString() + i,
         };
       }
     });
@@ -171,8 +171,7 @@ function phoneFormat(input) {
 
 /*
 TODO LIST
-
-- Twilio API
+\
 - Quiz button glitch
 - Delete All button
 - Format answers to remove "/n" & "/t"
@@ -180,5 +179,4 @@ TODO LIST
 - Host cors-anywhere (or figure out cors ??)
 - How?
 - Why?
-- Heroku
 */
