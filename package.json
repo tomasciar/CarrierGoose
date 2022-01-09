@@ -20,6 +20,7 @@
   "homepage": "https://github.com/tomasciar/CarrierGoose#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.2",
     "express-ejs-layouts": "^2.5.1",
@@ -27,7 +28,6 @@
     "twilio": "^3.72.0"
   },
   "devDependencies": {
-    "dotenv": "^10.0.0",
     "nodemon": "^2.0.15"
   }
 }
