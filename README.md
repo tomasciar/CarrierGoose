@@ -1,10 +1,11 @@
 # CarrierGoose
 A web app that delivers a friendly todo list to your phone by text message
 
-![cglanding](https://user-images.githubusercontent.com/81879857/148682801-67726ceb-a266-4de1-9f76-74287c711d8c.png)
-![IMG_5421](https://user-images.githubusercontent.com/81879857/148683159-a4bd7ebb-d7ac-4736-8053-8ed26955a92f.jpg)
-![IMG_5419](https://user-images.githubusercontent.com/81879857/148683182-3f9d88c8-c75b-4e31-9522-a1665ace2894.jpg)
-![IMG_5420](https://user-images.githubusercontent.com/81879857/148683146-e91719ba-a59a-42bd-868e-0f93dfe8244d.jpg)
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/81879857/148682801-67726ceb-a266-4de1-9f76-74287c711d8c.png" width=500px height=350px/>
+  <img src="https://user-images.githubusercontent.com/81879857/148683146-e91719ba-a59a-42bd-868e-0f93dfe8244d.jpg" width=350px height=350px/>
+  <img src="https://user-images.githubusercontent.com/81879857/148683159-a4bd7ebb-d7ac-4736-8053-8ed26955a92f.jpg" width=100px height=100px/>
+</p>
 
 ## Backstory
 ### Inspiration
