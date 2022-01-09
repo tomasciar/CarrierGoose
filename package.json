@@ -4,7 +4,7 @@
   "description": "<img width=\"1440\" alt=\"IMG_6735\" src=\"https://user-images.githubusercontent.com/45378799/147782240-aeaa3ed0-82de-493d-88e2-b9a263d7e54b.png\">",
   "main": "server.js",
   "scripts": {
-    "start": "node ./server.js",
+    "start": "nodemon ./server.js",
     "dev": "nodemon ./server.js"
   },
   "repository": {
