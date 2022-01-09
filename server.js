@@ -1,3 +1,4 @@
+// Enable functionality for local and hosted builds
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
@@ -27,7 +28,7 @@ app.use(express.json());
 // db.on("error", (error) => console.log(error));
 // db.once("open", () => console.log("Connected to Mongoose"));
 
-let todos = null;
+let todos = [];
 
 // Routes Definitions
 app.post("/todos", (req, res) => {
