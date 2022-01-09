@@ -1,30 +1,21 @@
 # CarrierGoose
-A web app that delivers a friendly todo list to your phone by text message
-
-<p float="left">
-  <img src="https://user-images.githubusercontent.com/81879857/148682801-67726ceb-a266-4de1-9f76-74287c711d8c.png" width=400px height=275px/>
-  <img src="https://user-images.githubusercontent.com/81879857/148683146-e91719ba-a59a-42bd-868e-0f93dfe8244d.jpg" width=275px height=275px/>
-  <img src="https://user-images.githubusercontent.com/81879857/148683159-a4bd7ebb-d7ac-4736-8053-8ed26955a92f.jpg" width=125px height=125px/>
-</p>
+A web app that delivers your to-do list with a friendly message to your phone by text message.
 
 ## Backstory
 ### Inspiration
-As 1A students at the University of Waterloo, we faced many struggles in our first two weeks of university attempting to remember all the new information. We naturally began to quiz each other on concepts throughout the day. Thus, when Hack the North came along and we discovered Twilio’s intuitive SMS API, we were inspired to automate this process and quiz ourselves on topics we struggle with most.
-
-### What it does
-Studies in education and memory show that students retain facts and concepts better if exposed to them over a prolonged period of time, rather than cramming in one sitting. Career Goose allows users to input quiz questions and flashcards to receive them throughout the day as SMS messages, reinforcing the information.
+As busy students with vsariou assignments and pursuits, we often lose track of menial tasks like taking out the trash or calling our mothers. Carrier Goose serves as a solution to ensure we remember to get everything done.
 
 ### How we built it
-We implemented Twilio’s SMS API in a web app using HTML, CSS, JavaScript, NodeJS and ExpressJS.
+The text message functionality of the app is powered by Twilio's SMS API in NodeJS, using the ExpressJS framework and bodyParser middleware to transport data from the client to the server. The web app is run on Heroku using HTML/EJS, CSS, and JavaScript.
 
-### Challenges we ran into
-Lacking experience and knowledge in NodeJS and ExpressJS proved to come with many challenges in the implementation of the Twilio SMS API. We set out to learn as much JavaScript, NodeJS, and ExpressJS as we could with our limited free time. As well, creating solutions to prevent abuse of our app proved to be challenging.
+### Why it Works
+How often do you jot down your tasks in a to-do list or take a photo of things to do just to never open or look at it again? Carrier Goose is the solution to your issues. 
 
-### Accomplishments that we're proud of
-After leaving the project incomplete at Hack the North in Fall 2021, we returned to the challenge during our Winter Break. We are very proud to have been able to return to this project and create what we imagined at Hack the North.
+With Carrier Goose pinned to the top of your text messages, you'll be reminded of your tasks for the day every time you check your texts.
 
-### What we learned
-We completed a JavaScript course to solidify our foundation, before completely redesigning the web app and learning NodeJS and ExpressJS to implement the Twilio SMS API.
+<img src"https://user-images.githubusercontent.com/45378799/148703696-4dcff505-6673-40be-b092-235633d8951e.png" width=400px />
 
-### What's next for Carrier Goose
-Carrier Goose's next step is to be hosted online for public use.
+Simply start your day by adding your tasks to carriergoose.herokuapp.com and you're all set!
+
+
+
