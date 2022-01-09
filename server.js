@@ -27,15 +27,18 @@ app.use(express.json());
 // db.on("error", (error) => console.log(error));
 // db.once("open", () => console.log("Connected to Mongoose"));
 
-// Routes Definitions
-app
-  .route("/")
+let todos = null;
 
-  .post((req, res) => {
-    console.log(req.body);
-    // sendMessage(req.body, req.body.number);
-    res.end();
-  });
+// Routes Definitions
+app.post("/todos", (req, res) => {
+  todos = req.body;
+  res.end();
+});
+
+app.post("/", (req, res) => {
+  sendMessage(todos, req.body.number);
+  res.redirect("/");
+});
 
 // Server Activation
 app.use("/", indexRouter);
