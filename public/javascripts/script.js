@@ -20,6 +20,16 @@ const ITEM_STORAGE_KEY = `${LOCAL_STORAGE_PREFIX}-items`;
 let items = loadItems();
 items.forEach(renderItems);
 
+const options = {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(items),
+};
+
+fetch("/todos", options);
+
 // Create new item when question & answer form is submitted
 addButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -29,10 +39,8 @@ addButton.addEventListener("click", (e) => {
   // Template for new list item
   const newItem = {
     todo: input.value,
-    id: new Date().valueOf().toString()
+    id: new Date().valueOf().toString(),
   };
-
-  console.log(newItem);
 
   // Add the item to the items array and local storage
   items.push(newItem);
@@ -43,12 +51,12 @@ addButton.addEventListener("click", (e) => {
   const options = {
     method: "POST",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(items)
+    body: JSON.stringify(items),
   };
 
-  fetch("/", options);
+  fetch("/todos", options);
 
   // Clear the question and answer inputs
   input.value = "";

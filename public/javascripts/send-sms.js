@@ -14,14 +14,14 @@ function sendMessage(todoList, number) {
   let list = "";
 
   for (let i = 0; i < todoList.length; i++) {
-    list.concat("- ", todoList[i].todo, "/n");
+    list = list.concat("- ", todoList[i].todo, "\n");
   }
 
   client.messages
     .create({
-      body: "Here is a list of todo items:\n",
+      body: "Here is a list of todo items:\n" + list,
       to: number,
-      from: "+16479552565"
+      from: "+16479552565",
     })
     .then((message) => console.log(message.sid));
 }
