@@ -2,9 +2,9 @@
 A web app that delivers a friendly todo list to your phone by text message
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/81879857/148682801-67726ceb-a266-4de1-9f76-74287c711d8c.png" width=500px height=350px/>
-  <img src="https://user-images.githubusercontent.com/81879857/148683146-e91719ba-a59a-42bd-868e-0f93dfe8244d.jpg" width=350px height=350px/>
-  <img src="https://user-images.githubusercontent.com/81879857/148683159-a4bd7ebb-d7ac-4736-8053-8ed26955a92f.jpg" width=100px height=100px/>
+  <img src="https://user-images.githubusercontent.com/81879857/148682801-67726ceb-a266-4de1-9f76-74287c711d8c.png" width=400px height=275px/>
+  <img src="https://user-images.githubusercontent.com/81879857/148683146-e91719ba-a59a-42bd-868e-0f93dfe8244d.jpg" width=275px height=275px/>
+  <img src="https://user-images.githubusercontent.com/81879857/148683159-a4bd7ebb-d7ac-4736-8053-8ed26955a92f.jpg" width=125px height=125px/>
 </p>
 
 ## Backstory
