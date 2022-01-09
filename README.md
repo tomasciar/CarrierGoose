@@ -13,7 +13,7 @@ How often do you jot down your tasks in a to-do list or take a photo of things t
 
 With Carrier Goose pinned to the top of your text messages, you'll be reminded of your tasks for the day every time you check your texts.
 
-<img src"https://user-images.githubusercontent.com/45378799/148703696-4dcff505-6673-40be-b092-235633d8951e.png" width=400px />
+<img src "https://user-images.githubusercontent.com/45378799/148703696-4dcff505-6673-40be-b092-235633d8951e.png" width=400px />
 
 Simply start your day by adding your tasks to carriergoose.herokuapp.com and you're all set!
 
