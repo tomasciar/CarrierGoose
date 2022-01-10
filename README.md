@@ -12,7 +12,7 @@ How often do you jot down your tasks in a to-do list or take a photo of things t
 
 <img src='https://user-images.githubusercontent.com/45378799/148705001-8e2b0c70-beae-47bf-b51b-0186593286b4.png' width=800px/>
 
-Simply start your day by adding your tasks at www.carriergoose.ca and you're all set!
+Simply start your day by adding your tasks at https://www.carriergoose.ca and you're all set!
 
 
 
