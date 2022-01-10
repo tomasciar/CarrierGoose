@@ -9,9 +9,11 @@
           class="input"
           id="todo"
           type="text"
-          placeholder="Enter Todo Item"
+          placeholder="Add an item to your to-do list"
         />
-        <button class="button" id="add-button">+</button>
+        <button class="button" id="add-button">
+          <img id="plus-icon" src="/images/plus.png" />
+        </button>
       </div>
     </form>
 
@@ -23,7 +25,7 @@
           type="tel"
           name="number"
           onInput="this.value = phoneFormat(this.value)"
-          placeholder="Phone Number"
+          placeholder="Phone number"
         />
         <button class="button" id="send-button">
           <img id="send-icon" src="/images/send2.png" />

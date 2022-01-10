@@ -130,10 +130,3 @@ function phoneFormat(input) {
   }
   return input;
 }
-
-/*
-TODO LIST
-\
-- Delete All button
-- Format answers to remove "/n" & "/t"
-*/
