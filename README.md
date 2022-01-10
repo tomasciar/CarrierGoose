@@ -1,4 +1,4 @@
-# CarrierGoose
+# Carrier Goose
 A web app that delivers your to-do list with a friendly message to your phone by text message.
 
 ## Inspiration
