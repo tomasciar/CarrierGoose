@@ -1,5 +1,5 @@
 # Carrier Goose
-A web app that delivers your to-do list with a friendly message to your phone by text message.
+A web app that delivers reminders with a friendly message to your phone by text.
 
 ## Inspiration
 As busy students with various assignments and pursuits, we often lose track of menial tasks like taking out the trash or calling our mothers. Carrier Goose serves as a solution to ensure we remember to get everything done.
